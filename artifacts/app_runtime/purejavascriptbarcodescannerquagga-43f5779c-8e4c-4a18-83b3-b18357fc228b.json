@@ -1,0 +1,370 @@
+{
+	"id": "43f5779c-8e4c-4a18-83b3-b18357fc228b",
+	"createdAt": "2022-02-04T15:50:01.786Z",
+	"updatedAt": "2022-08-01T08:55:15.543Z",
+	"createdBy": "luuk.wosten@neptune-software.com",
+	"changedBy": "kristin.eliassen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "46d93b14-79b9-4a39-c6de-2fd426c9373d",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "841c12dd-cb1d-415f-f5b0-bac77a5273aa",
+					"fieldName": "oApp",
+					"fieldParent": "46d93b14-79b9-4a39-c6de-2fd426c9373d",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "1a671677-ec46-4b20-cf32-6c25356491c8",
+							"fieldName": "oPageBarcodeScanner",
+							"fieldParent": "841c12dd-cb1d-415f-f5b0-bac77a5273aa",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "e98e8e12-117b-4784-b542-c1dfd754df76",
+									"fieldName": "oHBoxControls",
+									"fieldParent": "1a671677-ec46-4b20-cf32-6c25356491c8",
+									"fieldType": "sap.m.HBox",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "styleClassMargin",
+											"grouping": "Properties",
+											"value": "sapUiSmallMarginTop",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "justifyContent",
+											"grouping": "Properties",
+											"value": "Center",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "f80fab11-c753-4945-867b-5b46109fb1d2",
+											"fieldName": "oButtonStart",
+											"fieldParent": "e98e8e12-117b-4784-b542-c1dfd754df76",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Start",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "styleClassMargin",
+													"grouping": "Properties",
+													"value": "sapUiMediumMarginEnd",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Anonymous Function",
+													"script": [
+														"==OBJECT STRING==",
+														"Quagga.init({",
+														"        inputStream : {",
+														"        name : \"Live\",",
+														"        type : \"LiveStream\",",
+														"        target: document.getElementById(\"reader\")    // Or '#yourElement' (optional)",
+														"        },",
+														"        decoder : {",
+														"        readers : [\"code_128_reader\"]",
+														"        }",
+														"    }, function(err) {",
+														"        if (err) {",
+														"            console.log(err);",
+														"            return",
+														"        }",
+														"        console.log(\"Initialization finished. Ready to start\");",
+														"        Quagga.start();",
+														"});"
+													],
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "d8dc3b8c-abd2-40b0-fd81-f0f1cb30c2e4",
+											"fieldName": "oButtonStop",
+											"fieldParent": "e98e8e12-117b-4784-b542-c1dfd754df76",
+											"fieldType": "sap.m.Button",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Stop",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "press",
+													"grouping": "Events",
+													"value": "Quagga.stop();",
+													"script": "Quagga.stop();",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "9109df0a-3ada-435e-9e33-e4a7297b8f0a",
+									"fieldName": "oHBoxVideoContainer",
+									"fieldParent": "1a671677-ec46-4b20-cf32-6c25356491c8",
+									"fieldType": "sap.m.HBox",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "width",
+											"grouping": "Properties",
+											"value": "100%",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "justifyContent",
+											"grouping": "Properties",
+											"value": "Center",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "753859b0-77a1-4efd-d62d-a258dc77fa8d",
+											"fieldName": "oHTMLObject",
+											"fieldParent": "9109df0a-3ada-435e-9e33-e4a7297b8f0a",
+											"fieldType": "sap.ui.core.HTML",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "content",
+													"grouping": "Properties",
+													"value": "<div style=width: 500px id=reader></div>",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "d34ecefa-6d34-4365-f2bc-a82123dd312c",
+					"fieldName": "QuaggaJS",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "3e9aa316-acea-47dc-bb75-3820041d0c33",
+							"fieldName": "README",
+							"fieldParent": "d34ecefa-6d34-4365-f2bc-a82123dd312c",
+							"fieldType": "neptune.Text",
+							"script": [
+								"==OBJECT STRING==",
+								"Add this to your Application + Launchpad header:",
+								"",
+								"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js\"></script>",
+								"",
+								"You can save this .min.js file, upload it to your media library, and use that URL instead!"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "8e88b0f0-9b1f-443e-d137-b70e28c5bb15",
+							"fieldName": "oJavascriptQuagga",
+							"fieldParent": "d34ecefa-6d34-4365-f2bc-a82123dd312c",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"setTimeout(function() {\r",
+								"\r",
+								"    Quagga.init({\r",
+								"        inputStream : {\r",
+								"        name : \"Live\",\r",
+								"        type : \"LiveStream\",\r",
+								"        target: document.getElementById(\"reader\")    // Or '#yourElement' (optional)\r",
+								"        },\r",
+								"        decoder : {\r",
+								"        // You can add/change this according to the type of barcode you wish to scan\r",
+								"        readers : [\"code_128_reader\"]\r",
+								"        }\r",
+								"    }, function(err) {\r",
+								"        if (err) {\r",
+								"            console.log(err);\r",
+								"            return\r",
+								"        }\r",
+								"        console.log(\"Initialization finished. Ready to start\");\r",
+								"        Quagga.start();\r",
+								"    });\r",
+								"\r",
+								"}, 1000);\r",
+								"\r",
+								"\r",
+								"Quagga.onProcessed(function(result) {\r",
+								"    var drawingCtx = Quagga.canvas.ctx.overlay,\r",
+								"        drawingCanvas = Quagga.canvas.dom.overlay;\r",
+								"\r",
+								"    if (result) {\r",
+								"        if (result.boxes) {\r",
+								"            drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute(\"width\")), parseInt(drawingCanvas.getAttribute(\"height\")));\r",
+								"            result.boxes.filter(function (box) {\r",
+								"                return box !== result.box;\r",
+								"            }).forEach(function (box) {\r",
+								"                Quagga.ImageDebug.drawPath(box, {x: 0, y: 1}, drawingCtx, {color: \"green\", lineWidth: 2});\r",
+								"            });\r",
+								"        }\r",
+								"\r",
+								"        if (result.box) {\r",
+								"            Quagga.ImageDebug.drawPath(result.box, {x: 0, y: 1}, drawingCtx, {color: \"#00F\", lineWidth: 2});\r",
+								"        }\r",
+								"\r",
+								"        if (result.codeResult && result.codeResult.code) {\r",
+								"            Quagga.ImageDebug.drawPath(result.line, {x: 'x', y: 'y'}, drawingCtx, {color: 'red', lineWidth: 3});\r",
+								"        }\r",
+								"    }\r",
+								"});\r",
+								"\r",
+								"Quagga.onDetected(function(result) {\r",
+								"    var code = result.codeResult.code;\r",
+								"    sap.m.MessageToast.show(code);\r",
+								"    console.log(\"-----\");\r",
+								"    console.log(code);\r",
+								"});\r",
+								"\r",
+								""
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "921a2cb3-68b6-440b-b11b-97c109a2c968",
+							"fieldName": "oHTMLObjectQuaggaStyle",
+							"fieldParent": "d34ecefa-6d34-4365-f2bc-a82123dd312c",
+							"fieldType": "sap.ui.core.HTML",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "85acca5e-d863-48b4-fd49-664630ef8867",
+									"fieldName": "oHTMLStyleClassQuagga",
+									"fieldParent": "921a2cb3-68b6-440b-b11b-97c109a2c968",
+									"fieldType": "neptune.Html",
+									"script": [
+										"==OBJECT STRING==",
+										"<style type=\"text/css\" media=\"all\">",
+										".drawingBuffer {  ",
+										"    position: absolute;  ",
+										"    top: 0;  ",
+										"    left: 0; ",
+										"    z-index: 10; ",
+										"}",
+										"</style>"
+									],
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "22.8.1.1055",
+	"application": "purejavascriptbarcodescannerquagga",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "C",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js\"></script>",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"apis": []
+}

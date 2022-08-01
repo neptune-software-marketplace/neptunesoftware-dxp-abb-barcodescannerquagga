@@ -1,0 +1,47 @@
+{
+	"id": "96C86EA0-7711-ED11-BD6E-000D3AB1D9FF",
+	"createdAt": "2022-08-01T08:55:01.940Z",
+	"createdBy": "kristin.eliassen@neptune-software.com",
+	"git": {
+		"targetServers": [],
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-barcodescannerquagga",
+		"testServers": []
+	},
+	"name": "neptunesoftware-dxp-abb-barcodescannerquagga",
+	"description": null,
+	"ver": "22.8.1.856",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "43F5779C-8E4C-4A18-83B3-B18357FC228B",
+			"ver": "22.8.1.1055",
+			"application": "purejavascriptbarcodescannerquagga",
+			"title": "",
+			"description": ""
+		}
+	],
+	"api": [],
+	"odataMock": [],
+	"odataSource": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"wf_definition": [],
+	"department": [],
+	"script_scheduler": [],
+	"connector": []
+}
